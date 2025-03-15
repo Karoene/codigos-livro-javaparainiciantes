@@ -3,13 +3,11 @@ package capitulo4;
 public class HelpClass {
 
     void helpOn(int opc){
-
         switch (opc){
             case 1:
                 System.out.println("The if/else: ");
                 System.out.println("if(condition) statement;");
                 System.out.println("else statement;");
-
                 break;
             case 2:
                 System.out.println("The switch: ");
@@ -19,6 +17,10 @@ public class HelpClass {
                 System.out.println("        break;");
                 System.out.println("    default: //optional");
                 System.out.println("}");
+                break;
+            case 3:
+                System.out.println("The for classic: ");
+                System.out.println("for(inizialization;condition;index) statement;");
                 break;
         }
 
@@ -34,7 +36,7 @@ public class HelpClass {
     }
 
     boolean isValid(int opc){
-        if((opc > 4) || (opc < 0)){
+        if((opc >= 4) || (opc <= 0)){
             System.out.println("Invalid Option!");
             return false;
         }
