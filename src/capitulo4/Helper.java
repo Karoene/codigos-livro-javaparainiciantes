@@ -4,18 +4,20 @@ import java.util.Scanner;
 
 public class Helper {
     public static void main(String[] args){
-        Scanner teclado = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
         int option;
+
         HelpClass first = new HelpClass();
 
-        for(;;) {
+        do {
             first.showMenu();
-            do {
-            option = teclado.nextInt();
-            //System.out.println(option);
-            }while(!first.isValid(option));
+            option = keyboard.nextInt();
+            if (!first.isValid(option)) break;
             first.helpOn(option);
+        } while (first.isValid(option));
 
-        }
+
     }
+
+
 }
