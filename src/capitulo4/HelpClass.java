@@ -27,19 +27,17 @@ public class HelpClass {
     }
 
     void showMenu(){
+        System.out.println();
         System.out.println("---------HELPER MENU---------");
-        System.out.println("Choise an Number");
         System.out.println("1 - if/else");
         System.out.println("2 - switch");
         System.out.println("3 - for");
-        System.out.println();
+        System.out.println("Choise an Number (press 0 to quit)");
+
     }
 
     boolean isValid(int opc){
-        if((opc >= 4) || (opc <= 0)){
-            System.out.println("Invalid Option!");
-            return false;
-        }
+        if( ((opc >= 4) || (opc <= 0)) )return false;
         return true;
     }
 
